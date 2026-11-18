@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp | Previsão do Tempo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>☁️ WeatherApp</h1>
+            <p>Descubra o clima da sua cidade</p>
+        </header>
+
+        <section class="search">
+            <input type="text" id="cityInput" placeholder="Digite o nome da cidade...">
+            <button id="searchButton">Pesquisar</button>
+        </section>
+
+        <section class="weather-card" id="weatherCard">
+            <h2 id="cityName">Bem-vindo!</h2>
+            <div class="temperature" id="temperature">--°C</div>
+            <p id="description">Pesquise uma cidade para consultar o clima.</p>
+
+            <div class="details">
+                <div>
+                    <span>💧 Umidade</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div>
+                    <span>💨 Vento</span>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+                <div>
+                    <span>🌡️ Sensação térmica</span>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+            </div>
+        </section>
+
+        <p id="errorMessage"></p>
+
+        <footer>
+            <p>WeatherApp © 2026 | Desenvolvido com Python</p>
+        </footer>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
